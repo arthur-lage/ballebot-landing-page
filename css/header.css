@@ -1,0 +1,113 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2rem 0;
+  border-bottom: 0.4px solid #fff2e7;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+header nav ul li a {
+  color: #fff;
+  font-size: clamp(1.2rem, 1vw, 1.8rem);
+  font-family: "Sarala", sans-serif;
+}
+header .mobile-menu {
+  position: relative;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: clamp(3rem, 2.5vw, 6rem);
+  height: clamp(4rem, 2.5vw, 8rem);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+header .hamburger {
+  width: 100%;
+  height: clamp(0.25rem, 1.5vw, 0.4rem);
+  background: #fff;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+}
+header .hamburger::before,
+header .hamburger::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: clamp(0.25rem, 1.5vw, 0.4rem);
+  background: #fff;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+}
+header .hamburger::before {
+  transform: translateY(-16px);
+}
+header .hamburger::after {
+  transform: translateY(16px);
+}
+header .mobile-menu.open .hamburger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+header .mobile-menu.open .hamburger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+header .mobile-menu.open .hamburger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+header .hamburger,
+header .hamburger::before,
+header .hamburger::after {
+  background: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100vh;
+    background: linear-gradient(to bottom, #2f2325 16.62%, #8e5d52 85.61%);
+    transform: translateY(-100vh);
+    visibility: hidden;
+    transition: 0.25s ease;
+    opacity: 0;
+  }
+  nav ul {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6.4rem;
+  }
+  nav ul li a {
+    font-size: clamp(1.4rem, 4vw, 2.2rem);
+  }
+
+  body.menu-is-open nav {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  header {
+    justify-content: space-between;
+    padding: 2rem 4rem;
+  }
+
+  header .mobile-menu {
+    display: flex;
+  }
+}
+
+/*# sourceMappingURL=header.css.map */

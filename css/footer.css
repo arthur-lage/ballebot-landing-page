@@ -1,0 +1,13 @@
+footer {
+  padding: 3.1rem 0 3rem 0;
+  border-top: 0.4px solid #fff2e7;
+  text-align: center;
+}
+
+@media screen and (max-width: 560px) {
+  footer img {
+    width: clamp(50%, 2.5vw, 80%);
+  }
+}
+
+/*# sourceMappingURL=footer.css.map */

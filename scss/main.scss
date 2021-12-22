@@ -1,0 +1,124 @@
+main {
+  display: flex;
+  flex-direction: column;
+
+  .main-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 5rem;
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: clamp(1.6rem, 1vw, 3.2rem);
+
+      h1 {
+        font-family: "Righteous", sans-serif;
+        font-size: clamp(2rem, 1vw, 6.4rem);
+        color: #fff;
+        font-weight: 400;
+      }
+
+      h2 {
+        font-family: "Sarala", sans-serif;
+        font-size: clamp(1.2rem, 1vw, 2.4rem);
+        font-weight: 400;
+        color: #ecd6c4;
+      }
+
+      button {
+        font-weight: 400;
+        font-family: "Sarala", sans-serif;
+        background: #ecd6c4;
+        color: #2f2325;
+        transition: 0.2s ease;
+        box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+        border: 0;
+        cursor: pointer;
+        font-size: clamp(1rem, 1vw, 2.4rem);
+        width: clamp(9rem, 8vw, 20rem);
+        height: clamp(3.4rem, 1vw, 7.4rem);
+
+        &:hover {
+          filter: brightness(1.2);
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    .main-section img {
+        width: clamp(70%, 2.5vw, 80%);
+      }
+  }
+
+  .secondary-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 3.5rem;
+
+    .content {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      h2 {
+        padding-top: clamp(3.2rem, 1vw, 7.4rem);
+        border-top: 0.4px solid #fff2e7;
+        font-size: clamp(1.2rem, 2vw, 2.4rem);
+        color: #fff2e7;
+        font-family: "Righteous", sans-serif;
+        font-weight: 40;
+        text-align: center;
+        margin-bottom: 3.2rem;
+        width: max-content;
+        align-self: center;
+      }
+
+      ul {
+        list-style: none;
+        gap: 1.5rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        li {
+          text-align: center;
+          font-family: "Sarala", sans-serif;
+          font-size: clamp(1rem, 1vw, 1.8rem);
+          color: #ecd6c4;
+
+          strong {
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  main {
+    padding: 2rem 5rem 0 5rem;
+  }
+
+  .main-section img {
+    width: clamp(90%, 2.5vw, 100%);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    .main-section {
+      flex-direction: column-reverse;
+
+      .content {
+        text-align: center;
+        margin-top: 1.5rem;
+        align-items: center;
+      }
+    }
+  }
+}
