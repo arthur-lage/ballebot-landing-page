@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img src="./images/ballebot.svg" alt="Balle Bot" />
+    <img src="./assets/ballebot.svg" alt="Balle Bot" />
 </h1>
 
 # ✉ About
@@ -15,6 +15,8 @@ A responsive landing page for the BalleBot bot on discord 🤖.
 </div>
 
 # ✨ Figma design
+
+You can access the website design by the following link:
 
 [Access Figma Design](https://www.figma.com/file/myqP66iQwzjwjrIAJyyrip/BalleBot?node-id=0%3A1)
 
